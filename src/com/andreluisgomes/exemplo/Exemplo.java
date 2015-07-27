@@ -26,7 +26,7 @@ public class Exemplo {
         //Passando a Tipagem = Fatura
         /*faturasVencidas.forEach((Fatura f) -> {
             enviador.enviar(f.getEmailDevedor(),f.resumo());
-            //
+            //outras linhas executadas
         });*/
 
         //Sem a Tipagem, pois ja sabe-se que a lista é de faturas
