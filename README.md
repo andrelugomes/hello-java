@@ -1,6 +1,7 @@
 # Lambdas do Java 8
 ## Estudando os lambdas do Java 8
 Estudos baseados na video aluda da AlgaWorks : [AlgaWorks](http://blog.algaworks.com/introducao-ao-lambda-do-java-8/)
+
 Blog da Caelum : [Blog da Caelum](http://blog.caelum.com.br/o-minimo-que-voce-deve-saber-de-java-8/)
 
 ### Conteúdo
