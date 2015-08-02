@@ -13,7 +13,7 @@ Blog da Caelum : [Blog da Caelum](http://blog.caelum.com.br/o-minimo-que-voce-de
      - [x] Ex.: java.util.List - sort() - ordenação
      - [ ] @FunctionalInterface - "Criar minha própria" 
 - [ ] Lambda Expression : 
-     - [ ] f -> System.out.printf("f.getEmailDevedor()")
+     - [x] f -> System.out.printf("f.getEmailDevedor()")
      - [ ] method reference : String s -> s.length() = String::length
 - [ ] Streams
 	 - [x] filter()
