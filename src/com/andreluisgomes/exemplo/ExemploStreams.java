@@ -1,11 +1,10 @@
 package com.andreluisgomes.exemplo;
 
 import java.util.List;
-import java.util.OptionalDouble;
 import java.util.stream.Collectors;
 
 import com.andreluisgomes.dao.FaturaDAO;
-import com.andreluisgomes.emial.EnviadorEmail;
+import com.andreluisgomes.email.EnviadorEmail;
 import com.andreluisgomes.modelo.Fatura;
 
 /**
@@ -26,15 +25,6 @@ public class ExemploStreams {
         List<Fatura> faturasVencidas = new FaturaDAO().buscarfaturasVencidas();
 
         faturasVencidas.stream().filter(f -> f.getValor() < 250).forEach(f -> enviador.enviar(f.getEmailDevedor(),f.resumo()));
-
-        /***
-         * devemos utilizá-lo quando precisamos aplicar transformações em nossa lista sem a necessidade de variáveis intermediárias
-         * 
-         * .average() devolve um Optional
-         */
-        OptionalDouble media = faturasVencidas.stream().mapToDouble(Fatura::getValor).average();
-        
-        System.out.println(media);
         
         //Collect
         List<Fatura> collectFaturas = faturasVencidas.stream().filter(f -> f.getValor() < 350).collect(Collectors.toList());

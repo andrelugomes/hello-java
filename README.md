@@ -11,13 +11,16 @@ Blog da Caelum : [Blog da Caelum](http://blog.caelum.com.br/o-minimo-que-voce-de
 - [x] Interface com método concreto. Modificador de acesso default: 
      - [x] Ex.: Iterable.java  - forEach()
      - [x] Ex.: java.util.List - sort() - ordenação
-     - [ ] @FunctionalInterface - "Criar minha própria" 
+     - [x] @FunctionalInterface - "Criar minha própria" 
+     - [x] Testar a "herança" de método concreto default
 - [ ] Lambda Expression : 
      - [x] f -> System.out.printf("f.getEmailDevedor()")
+     - [x] implementar comportamento com Interface Funcional
      - [ ] method reference : String s -> s.length() = String::length
 - [ ] Streams
 	 - [x] filter()
 	 - [x] map()
 	 - [ ] reduce()
 	 - [x] collect() - trasnforma o stream em uma collections novamente
+	 - [ ] parallel()
 - [ ] Optional

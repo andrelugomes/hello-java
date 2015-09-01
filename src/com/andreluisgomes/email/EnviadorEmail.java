@@ -1,4 +1,4 @@
-package com.andreluisgomes.emial;
+package com.andreluisgomes.email;
 
 /**
  * Created by agomes on 27/07/15.

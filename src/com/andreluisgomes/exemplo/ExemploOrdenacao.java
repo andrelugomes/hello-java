@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.List;
 
 import com.andreluisgomes.dao.FaturaDAO;
-import com.andreluisgomes.emial.EnviadorEmail;
+import com.andreluisgomes.email.EnviadorEmail;
 import com.andreluisgomes.modelo.Fatura;
 
 /**
