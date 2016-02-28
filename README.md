@@ -11,7 +11,9 @@ Blog da Caelum : [Blog da Caelum](http://blog.caelum.com.br/o-minimo-que-voce-de
 - [x] Interface com método concreto. Modificador de acesso default: 
      - [x] Ex.: Iterable.java  - forEach()
      - [x] Ex.: java.util.List - sort() - ordenação
-     - [x] @FunctionalInterface - "Criar minha própria" 
+     - [x] @FunctionalInterface - "Criar minha própria"
+        - 1 único método abstrato. Além desse método ela pode ter outros métodos, contanto que sejam default.
+        - Essa estrutura é fundamental, pois assim o compilador sabe exatamente que o corpo da expressão lambda que escrevemos é a implementação de seu único método abstrato
      - [x] Testar a "herança" de método concreto default
 - [ ] Lambda Expression : 
      - [x] f -> System.out.printf("f.getEmailDevedor()")
