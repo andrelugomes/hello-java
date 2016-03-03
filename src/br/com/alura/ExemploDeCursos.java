@@ -1,8 +1,7 @@
 package br.com.alura;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -30,7 +29,44 @@ public class ExemploDeCursos {
         int sum = cursos.stream().filter(c -> c.getAlunos() > 10).mapToInt(Curso::getAlunos).sum();
         System.out.println(sum);
 
+        //Caso for um mapToDouble, DoucleStream : Você também pode representar utilizando um Stream<Double>,
+        //mas isso vai forçar o autoboxing dos doubles (para o tipo Double) . Isto é, utilizará mais recursos da JVM.
+
+
         Stream<String> streamDeStrings = cursos.stream().map(Curso::getNome);
+
+        //Optional
+        Optional<Curso> cursoOptional = cursos.stream().filter(c -> c.getAlunos() > 10).findAny();
+        cursoOptional.ifPresent(c -> System.out.println(c.getNome()));
+
+
+        //Colectors
+
+        List<Curso> novaListaDeCurso = cursos.stream().filter(c -> c.getAlunos() > 10).collect(Collectors.toList());
+
+        novaListaDeCurso.forEach(curso -> System.out.println(curso.getNome()));
+
+        //toMap, recebe duas functions, uma para chave e outra pro valor
+        Map<String, Integer> mapDeCursos = cursos.stream()
+                .filter(c -> c.getAlunos() > 10)
+                .collect(Collectors.toMap(
+                        c -> c.getNome(),
+                        c -> c.getAlunos()));
+
+        System.out.println(mapDeCursos);
+
+        cursos.stream()
+                .filter(c -> c.getAlunos() > 10)
+                .collect(Collectors.toMap(
+                        c -> c.getNome(),
+                        c -> c.getAlunos()))
+                .forEach((nome, aluno) -> System.out.println(nome + " tem "+ aluno+" alunos"));
+
+
+        //MEdia de quantidade de alunos
+        OptionalDouble average = cursos.stream().mapToDouble(Curso::getAlunos).average();
+        System.out.println(average);
+
     }
 }
 
