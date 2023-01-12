@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/lambdas-java-8.iml" filepath="$PROJECT_DIR$/lambdas-java-8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-8-lambdas/java-8-lambdas.iml" filepath="$PROJECT_DIR$/java-8-lambdas/java-8-lambdas.iml" />
     </modules>
   </component>
 </project>
